@@ -23,7 +23,10 @@ GET /stocks/{id}
 ```
 
 ### Criar uma Nova Ação
-Cria uma nova ação com base nos dados fornecidos.
+Cria uma nova ação com base nos dados fornecidos. 
+Atente-se ao padrão:
+- "symbol": é formada por duas letras e um número
+- "price": valor positivo para incrementar e valor negativo para decrementar
 
 **Endpoint:**
 ```http
@@ -33,7 +36,7 @@ POST /stocks
 
 ```JSON
 {
-  "symbol": "BBAS3",
+  "symbol": "BB3",
   "companyName": "Banco do Brasil SA",
   "price": 56.97
 }
@@ -50,9 +53,9 @@ PUT /stocks/{id}
 
 ```JSON
 {
-  "symbol": "BBAS3",
+  "symbol": "BB3",
   "companyName": "Banco do Brasil SA",
-  "price": 59.97
+  "price": -10
 }
 
 ```
